@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1440px;
+    color: hsl(234, 29%, 20%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+}
+.image img{
+    width: 100%;
+}
+.desktop {
+    display: none;
+}
+
+.detail {
+    width: 100%;
+    padding: 30px;
+}
+p {
+    margin: 20px auto 25px;
+}
+ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    margin: 10px 0;
+    line-height: 25px;
+}
+ul li img {
+    align-self: self-start;
+}
+form {
+    width: 100%;
+    margin: 35px 0;
+    position: relative;
+}
+label {
+    font-size: 13px;
+    font-weight: 700;
+}
+small {
+    font-weight: bold;
+    color: hsl(4, 100%, 67%);
+    position: absolute;
+    right: 0;
+    display: none;
+}
+input {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: 0;
+    cursor: pointer;
+}
+.email {
+    padding: 15px 0 15px 20px;
+    border: 1px solid hsl(231, 7%, 60%);
+    color: hsl(231, 7%, 60%);
+}
+.email:focus {
+    border: 1px solid hsl(235, 18%, 26%);
+    color: hsl(234, 29%, 20%);
+}
+.email::placeholder {
+    color: hsl(231, 7%, 60%);
+}
+.button {
+    background-color: hsl(235, 18%, 26%);
+    border: 1px solid hsl(235, 18%, 26%);
+    color: hsl(0, 0%, 100%);
+    padding: 15px 0;
+}
+.button:hover {
+    background: linear-gradient(40deg, hsl(4, 100%, 67%)50%, hsl(29, 100%, 50%));
+    border: 1px solid hsl(4, 100%, 67%);
+    box-shadow: 0 5px 15px -5px hsl(4, 100%, 67%);
+}
+
+.modal {
+    background-color: hsl(0, 0%, 100%);
+    padding: 30px;
+    margin: 100px auto;
+    width: 90%;
+    border: 2px solid hsl(235, 18%, 26%);
+    border-radius: 30px;
+    display: none;
+}
+.modal h1 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+.modal p {
+    line-height: 30px;
+}
+.modal span {
+    font-weight: 700;
+}
+.modal button {
+    width: 100%;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (min-width: 750px) {
+    body {
+        background-color: hsl(235, 18%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        background-color: hsl(0, 0%, 100%);
+        padding: 20px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        width: 90%;
+        border-radius: 30px;
+    }
+    .detail {
+        grid-area: span 1/1;
+    }
+    .detail h1 {
+        font-size: 4.5vw;
+    }
+    .image {
+        grid-area: span 2/2;
+        justify-self: right ;
+    }
+    .desktop {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .mobile {
+        display: none;
+    }
+    .modal {
+        margin: 100px auto;
+        width: 410px;
+        border: none;
+    }
+    .modal h1 {
+        font-size: 50px;
+    }
+}
+@media (min-width: 1000px) {
+    .container {
+        width: 65%;
+    }
+    .detail h1 {
+        font-size: 3.2rem;
+    }
+}
