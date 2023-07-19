@@ -16,9 +16,9 @@ Users will be able to:
 
 ### Screenshot
 
-![](./mobile-view.jpg)
-![](./desktop-view.jpg)
-![](./modal.jpg)
+![](./mobile-view.png)
+![](./desktop-view.png)
+![](./modal.png)
 
 ### Links
 
